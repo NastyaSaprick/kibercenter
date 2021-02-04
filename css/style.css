@@ -1,0 +1,1022 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*подключение шрифта*/
+@font-face{
+    font-family: Myriad;
+    src: url(../fonts/MyriadProRegular.ttf);
+}
+html{
+    font-family: 'Myriad' , sans-serif;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/*общие настройки элементов*/
+.container{
+    max-width:1400px;
+    width: 100%;
+    margin: auto;
+}
+.row{ /*строка*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.button-link{
+    border-radius:40px;
+}
+.title{
+    font-size: 52px;
+    line-height: 62px;
+    font-weight: 400;
+}
+
+
+/*header*/
+.menu-burger{
+    width: 100%;
+    max-width: 542px;
+}
+.header-top{
+    background: #000000;
+}
+.head{
+    padding-top: 22.5px;
+    padding-bottom: 49px;
+}
+.head__nav-menu , .nav-head{
+    max-width: 542px;
+}
+.nav-menu__link{
+    font-size: 18px;
+    line-height: 22px;
+}
+.nav-menu__link--color{
+    color: #ffffff;
+}
+.head__nav-contacts{
+    max-width: 380px;
+}
+.nav-contact__link{
+    color: #d5ef00;
+}
+.nav-contact__link--large-text{
+    font-size: 29px;
+}
+.nav-schedule__link{
+    max-width: 70px;
+    font-size: 13px;
+    line-height: 18px;
+}
+.head__nav-services{
+    max-width: 990px;
+}
+.nav-services__link{
+    line-height: 17px;
+    font-size: 15px;
+    max-width: 70px;
+}
+.services-nav__link-tel{
+    background:url(../img/subtitle/IPhone.svg) no-repeat left / 30px;
+    padding-left: 50px;
+}
+.services-nav__link-ipad{
+    background:url(../img/subtitle/iPad.svg) no-repeat left / 30px;
+    padding-left: 50px;
+}
+.services-nav__link-mac{
+    background:url(../img/subtitle/mac.svg) no-repeat left / 50px;
+    padding-left: 60px;
+}
+.services-nav__link-apple{
+    background:url(../img/subtitle/watch.svg) no-repeat left / 20px;
+    padding-left: 30px;
+}
+.services-nav__link-discount{
+    background:url(../img/subtitle/Sale.svg) no-repeat left / 30px;
+    padding-left: 50px;
+}
+.services-nav__link-korona{
+    background:url(../img/subtitle/korona.png) no-repeat left / 30px;
+    padding-left: 50px;
+}
+.header-bottom{
+    background:#c6f900;
+}
+.button-head{
+    font-size: 16px;
+    background-color: #ffffff;
+    padding: 12px 40px 10px 40px;
+    box-shadow: 0px 15px 20px 0px rgba(102, 231, 28, 0.4);
+}
+
+
+/* slaider */
+input[type=radio] {
+    display: none;
+}
+
+.wrapper {
+	height: 490px;
+	margin: 0 auto 0;
+	position: relative;
+	width: 100%;
+}
+
+.controls{
+    margin-top: -125px;
+    padding-left: 100px;
+    z-index: 5;
+}
+.item__slider{
+    padding-top: 50px;
+    padding-left: 880px;
+}
+.title__controls{
+    font-size: 52px;
+    color: #FFFFFF;
+    max-width: 510PX;
+    padding-bottom: 40px;
+
+}
+.text__controls{
+    font-size: 17px;
+    color: #FFFFFF;
+    max-width: 510px;
+    line-height: 27px;
+    padding-bottom: 40px;
+}
+.button__second{
+    border: 1px solid #d5ef00;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+.button__second__text{
+    color: #d5ef00;
+}
+.controls__slaider{
+    padding-top: 40px;
+}
+
+.slider {
+	background-color: #ddd;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.slides {
+	height: inherit;
+	position: absolute;
+	width: inherit;
+}
+
+.slide1 { background: url(../img/hero-slider/hero-bg-three.webp) no-repeat center / cover; }
+.slide2 { background: url(../img/hero-slider/hero-bg-two.webp) no-repeat center / cover; }
+.slide3 { background: url(../img/hero-slider/hero-bg.webp) no-repeat center / cover; }
+
+.wrapper .controls {
+	left: 50%;
+	margin-left: -98px;
+	position: absolute;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	border-radius: 50%;
+}
+
+.wrapper label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	border-radius: 50%;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	border-radius: 50%;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+	background: #ddd;
+}
+
+.slides {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	transform: scale(1.5);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
+
+/*service-center*/
+.service{
+    padding: 60px 0px;
+    align-items: flex-start;
+}
+.service-title{
+    max-width: 34%;
+}
+.subtitle{
+    font-size: 32px;
+    line-height: 42px;
+    text-align: right;
+}
+.service-text{
+    font-size: 16px;
+    line-height: 27px;
+    max-width: 60%;
+}
+
+/*advantages*/
+.advantages{
+    background-color: #f6f6f6;
+}
+.advan{
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+.advan-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.advan-cards{
+    align-items: flex-start;
+}
+.advan__card{
+    max-width: 220px;
+}
+.adv_card_img{
+    max-width: 70px;
+    width: 100%;
+    padding-bottom: 27px;
+}
+.adv_card_text{
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/*repairs*/
+.repair-iphone , .repair-Xiaomi{
+    padding-top: 57px;
+    justify-content: left;
+    align-items: flex-start;
+}
+.repair-Xiaomi{
+    padding-top: 95px;
+    padding-bottom: 150px;
+}
+.title-repair{
+    text-align: left;
+    padding-bottom: 10px;
+    position: relative;
+}
+.title-repair::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 1069px;
+    height: 3px;
+    background: linear-gradient(45deg,  #d5ef00, #ffffff);
+}
+.repair__repair-card{
+    padding-top: 35px;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+.column-repair-card-1{
+    max-width: 300px;
+}
+.repair__card-info{
+    font-size: 30px;
+    padding-top: 20px;
+}
+.column-repair-card-button{
+    max-width: 850px;
+    justify-content: flex-start;
+}
+.card-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #DDDDDD;
+    border-radius: 67px;
+    max-width: 160px;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.button-text{
+    max-width: 77px;
+    text-align: center;
+    font-size: 17px;
+}
+/*installment-plan*/
+.installment-plan{
+    background: url(../img/installment-plan/bakground.jpg) no-repeat center / cover;
+}
+.installment-plan__img{
+    flex-basis: 50%;
+    margin-top: -125px;
+}
+.installment-plan__info{
+    height: 100%;
+    flex-basis: 50%;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    align-items: flex-start;
+    padding-left: 48px;
+    position: relative;
+}
+.dimming{
+    position: relative;
+    z-index: 999;
+}
+.plan-info__title{
+    font-size: 40px;
+    color: #ffffff;
+    max-width: 460px;
+    width: 100%;
+    font-weight: 400;
+    padding-bottom: 53px;
+}
+.plan-info__text{
+    max-width: 480px;
+    width: 100%;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 26px;
+}
+.plan-info__button{
+    max-width: 240px;
+    height: 50px;
+    width: 100%;
+    border-radius:40px;
+    background: #C6F900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+   /*затемнение*/
+   .installment-plan__info::after{
+       content: '';
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.521);
+   }
+
+/*repair-service*/
+.rep-serv{
+    margin-top: 58px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+}
+.repair-service__title{
+    flex-basis: 35%;
+    font-size: 30px;
+    text-align: right;
+    line-height: 42px;
+    display: flex;
+}
+.rep-serv__info{
+    flex-basis: 60%;
+}
+.rep-serv__text{
+    font-size: 18px;
+}
+.rep-serv__link{
+    color: seagreen;
+    font-weight: 700;
+}
+
+/*challenge*/
+.challenge{
+    background: #f6f6f6;
+}
+.chall-image{
+    flex-basis: 30%;
+    margin-top: -30px;
+}
+.chall__info{
+    flex-basis: 50%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.chall__text{
+    padding: 50px 0;
+    font-size: 19px;
+    line-height: 25px;
+}
+.chall__info_button{
+    max-width: 270px;
+}
+.chall__info_link{
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+/*urgent-repairs*/
+.urgent-repairs{
+    margin-top: 73px;
+    background: #f6f6f6;
+    margin-bottom: 70px;
+}
+.urgent-repairs__img{
+    flex-basis: 50%;
+}
+.urger-repairs__info-text{
+    flex-basis: 40%;
+}
+.urger-repairs__title{
+    font-size: 29px;
+    line-height:40px;
+    padding-bottom: 45px;
+}
+.urger-repairs__text{
+    font-size: 19px;
+    padding-bottom: 40px;
+}
+
+/*social-network*/
+.social-network{
+    background: #f6f6f6;
+    margin-bottom: 75px;
+}
+.social-network__title{
+    max-width: 202px;
+    width: 100%;
+    text-align: end;
+    display: flex;
+    font-size: 35px;
+    line-height: 45px;
+}
+.social-network__discount{
+    max-width: 380px;
+}
+.social-network__discount-info{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 24px;
+}
+.social-network__image{
+    margin-top: -50px;
+}
+
+/*spare-parts*/
+.spare-parts{
+    background: #f6f6f6;
+}
+.spare-parts__image{
+    flex-basis: 20%;
+}
+.spare-parts__info-text{
+    flex-basis: 60%;
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+.spare-parts__info-text__title{
+    font-size: 33px;
+    color: #333333;
+    padding-bottom: 30px;
+}
+.spare-parts__info-text__text{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+/*footer*/
+.footer{
+    padding-top: 55px;
+    padding-bottom: 30px;
+    background:#000000;
+}
+.footer-block{
+    align-items: flex-start;
+}
+.logo__box{
+    flex-basis: 20%;
+}
+.footer__logo-text{
+    color:#7a7a7a;
+    padding-top: 30px;
+}
+.footer__navigation{
+    max-width: 700px;
+    align-items: flex-start;
+}
+.footer-nav{
+    max-width: 150px;
+    align-items: flex-start;
+}
+.footer-navc__link{
+    color:#7a7a7a;
+    padding-bottom: 15px;
+}
+.footer__contacts{
+    justify-content: flex-end;
+    align-items:flex-end;
+    flex-basis: 20%;
+}
+.footer__contacts__info{
+    padding-top: 20px;
+    color:#7a7a7a;
+    text-align: end;
+}
+.footer__contacts__button{
+    margin-top: 20px;
+    max-width: 135px;
+}
+.footer__button-link{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.footer-f{
+    background: url(../img/footer/fase-w.png) no-repeat center;
+}
+.footer-w{
+    background: url(../img/footer/wk-w.png) no-repeat center;
+}
+.footer-i{
+    background: url(../img/footer/insta-w.png) no-repeat center;
+}
+
+/*адоптация*/
+@media(max-width:1120px){
+    .container{
+        width: 99%;
+        margin: auto;
+    }
+    .row{
+        justify-content: space-around;
+    }
+    .head__nav-menu{
+        max-width: 100%;
+    }
+    .nav-menu{
+        order: 2;
+        padding-top: 20px;
+    }
+    .head__nav-contacts{
+        order: 1;
+    }
+    .head__nav-services {
+        padding-bottom: 30px;
+    }
+    .item__slider{
+        padding-left: 10PX;
+    }
+    .installment-plan__info{
+        flex-basis: 40%;
+    }
+
+    .column-repair-card-button{
+        justify-content: flex-start;
+    }
+    .title{
+        font-size: 36px;
+    }
+    .urgent-repairs__img{
+        flex-basis: 40%;
+    }
+    .urgent-repairs__img-image{
+        max-width: 500px;
+    }
+    .urger-repairs__text{
+        font-size: 15px;
+    }
+    .urger-repairs__title , .spare-parts__info-text__title{
+        font-size: 29px;
+        padding-bottom: 10px;
+        line-height: 30px;
+    }
+    .soc-net{
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    .social-network__title{
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .social-network__image{
+        max-width: 250px;
+    }
+    .social-network__discount-info{
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .spare-parts__image{
+        max-width: 400px;
+    }
+    .spare-parts__info-text{
+        flex-basis: 40%;
+    }
+    .urger-repairs__text{
+        padding-bottom: 10px;   
+    }
+    .spare-parts__info-text__text{
+        font-size: 16px;
+    }
+    .footer__contacts{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 100%;
+        align-items:center;
+    }
+    .footer__contacts__button{
+        order: 1;
+    }
+    .footer__contacts__info{
+        order: 2;
+        max-width: 400px;
+        text-align: left;
+    }
+    .title-repair::after{
+        width: 992px;
+    }
+}
+@media(max-width:992px){
+    .card-button{
+        max-width: 120px;
+    }
+    /*header*/
+    .services-nav__link-discount , .services-nav__link-tel{
+        padding-left: 35px;
+    }
+    .services-nav__link-ipad , .services-nav__link-korona{
+        padding-left: 35px;
+    }
+    .nav-services__link{
+        max-width: 60px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+    /*slider*/
+    .title__controls{
+        font-size: 42px;
+    }
+    .subtitle{
+        font-size: 28px;
+    }
+
+    /*ремонт*/
+    .title-repair::after{
+        width: 768px;
+    }
+    /*ремонт в рассрочку*/
+    .plan-info__imges{
+        max-width: 400px;
+    }
+    .plan-info__title{
+        font-size: 30px;
+    }
+    .plan-info__text{
+        font-size: 16px;
+    }
+    /*сервис по ремонту*/
+    .title {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .rep-serv__text{
+        font-size: 16px;
+    }
+
+    /*бесплатно приедим*/
+    .chall-image{
+        max-width: 350px;
+    }
+    /*срочный ремонт */
+    .urgent-repairs__img-image{
+        max-width: 400px;
+    }
+    /*соцсети*/
+    .social-network__image{
+        display: none;
+    }
+    /*footer*/
+    .logo__box{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer__logo{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        width: 100%;
+    }
+    .logo-img{
+        max-width: 140px;
+    }
+    .footer__logo-text{
+        padding: 0;
+    }
+    .nav-contact__link--large-text{
+        font-size: 20px;
+    }
+    .footer__contacts{
+        justify-content: space-around;
+    }
+}
+@media(max-width:768px){
+    .title{
+    text-align: center;
+    }
+    /*heder*/
+    .nav-services__link{
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+    /*sliders*/
+    .title__controls{
+        font-size: 35px;
+    }
+    /*сервисный центр по ремнту*/
+    .subtitle{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .service-text{
+        font-size: 14px;
+        line-height: 18px;
+   }
+
+   /*приемущества*/
+   .adv_card_text{
+       font-size: 14px;
+       line-height: 20px;
+       padding-bottom: 10px;
+   }
+
+   /*ремонт*/
+   .card-button{
+       max-width: 120px;
+   }
+   .button-text{
+       font-size: 15px;
+   }
+   /*ремонт в пассрочку*/
+   .plan-info__imges{
+       display: none;;
+   }
+   .installment-plan__info{
+       flex-basis: 100%;
+   }
+   /*сервис по ремонту*/
+   .rep-serv{
+       flex-direction: column;
+   }
+   .repair-service__title{
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   /*бесплатно приедим*/
+   .chall__info {
+       flex-basis: 100%;
+   }
+
+   .chall-image{
+       display: none;
+   }
+   /*срочный ремонт*/
+   .urgent-repairs__img{
+       display: none;
+   }
+   .urger-repairs__info-text{
+       flex-basis: 100%;
+   }
+   /*соцсети*/
+   .social-network__title{
+       text-align: center;
+       max-width: 100%;
+       margin-bottom: 20px;
+   }
+   /*запчасти*/
+   .spare-parts__image{
+       display: none;
+   }
+   .spare-parts__info-text{
+       flex-basis: 100%;
+   }
+   /*footer*/
+   .footer__logo-text {
+       font-size: 14px;
+       max-width:300px;
+   }
+   .footer__navigation{
+       max-width: 400px;
+       order: 2;
+       margin-top: 20px;
+   }
+   .footer-nav{
+       margin-bottom: 20px;
+   }
+   .footer__contacts{
+       order: 1;
+   }
+   .footer__contacts__button{
+       display: none;
+   }
+   .footer__contacts__info{
+       max-width: 300px;
+   }
+}  
+@media(max-width:560px){
+    /*header*/
+    .head__nav-contacts{
+        display: none;
+
+    }
+    /*sliders*/
+    .section__promo{
+        display: none;
+    }
+    /*сервис по ремонту*/
+    .service{
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+    .service-title{
+        max-width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .service-text{
+        max-width: 100%;
+    }
+    /*приемущества*/
+    .advan__card{
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 100%;
+    }
+    .adv_card_text{
+        text-align: left;
+        max-width: 250px;
+    }
+    /*ремонт*/
+    .title-repair{
+        padding-left: 20px;
+    }
+    .repair__repair-card{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title-repair::after{
+        width: 360px;
+    }
+    .repair__repair-card{
+        align-items:center;
+    }
+    .column-repair-card-button{
+        justify-content:center;
+        padding-top: 20px;
+    }
+    /*ремонт в рассрочку*/
+    .installment-plan__info{
+        padding-left: 20px;
+    }
+    /**/
+    .title, .subtitle{
+        text-align: left;
+    }
+    .container{
+        padding-left: 20px;
+    }
+    /*footer*/
+    .footer__logo , .footer__contacts{
+        flex-direction: column;
+        align-items:flex-start;
+        padding-bottom: 20px;
+    }
+    .footer__contacts__info{
+        padding-top: 0;
+        order: 2;
+    }
+    .footer__navigation{
+        order: 1;
+        padding-bottom: 20px;
+    }
+    .footer-nav{
+        margin-bottom: 0;
+
+    }
+
+    /*выпадающее меню*/
+    .nav-head{
+        display: none;
+    }
+    .menu-burger{
+        background: url(../img/menu.png) no-repeat center / 20px;
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+    .menu-burger:hover > .nav-head{
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 16px;
+        width: 300px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgb(0, 0, 0);
+    }
+    .nav-menu__link{
+        padding-bottom: 30px;
+    }
+}
+
+/*анимация*/
+a:hover{
+    animation-name: a-activ;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes a-activ{
+    to{
+        color: #e700ef;
+    }
+}
+.card-button:hover{
+    animation-name: button-activ;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes button-activ{
+    to{
+        color: #30ef00;
+        border: 2px solid  #30ef00;
+        box-shadow:0 0 20px rgba(0, 255, 13, 0.76);
+    }
+}
